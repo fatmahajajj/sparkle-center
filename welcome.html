@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkle center 💄💅 ✨</title>
+    <style>
+       
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff0f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  #welcome-text {
+    font-size: 2em;
+    color: #b03060;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2em;
+    color: #555;
+  }
+</style>
+<script>
+let text = "Welcome to Sparkle Beauty Center 💄💅";
+let i = 0;
+let speed = 80;
+
+function typeWriter() {
+if (i < text.length) {
+    document.getElementById("welcome-text").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  } else {
+    setTimeout(function() {
+      window.location.href = "index.html"; // الانتقال بعد انتهاء الكتابة
+    }, 1000); // تأخير بسيط قبل الانتقال
+  }
+}
+
+window.onload = function() {
+  typeWriter();
+};
+</script>
+</head>
+<body>
+  <h2 id="welcome-text"></h2>
+</body>
+</html>
